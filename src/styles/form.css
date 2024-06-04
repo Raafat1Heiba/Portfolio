@@ -1,0 +1,124 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 30px;
+  margin-bottom: 10rem;
+  width: 50%;
+  align-items: left;
+}
+
+input:focus {
+  outline: 0;
+  box-shadow: none;
+  border-color: transparent;
+  color: rgb(69, 79, 89);
+}
+
+input[type=email],
+input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+input:focus:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 15px;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.08);
+  height: 150px;
+}
+
+textarea:focus {
+  outline: 0;
+}
+
+input[type=submit] {
+  text-decoration: none;
+  color: rgb(5, 100, 189);
+  font-size: 1.2rem;
+  padding: 0.4rem 0.9rem;
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  border: 1px solid #0564bd;
+  width: 25%;
+  transition: transform 1s, background-color 1s, color 1s;
+}
+
+input[type=submit]:hover {
+  transform: scale(1.3);
+  background: #fff;
+  color: rgb(69, 79, 89);
+  box-shadow: 0 8px 16px 0 #0564bd;
+}
+
+input[type=submit]:active {
+  background: #0564bd;
+}
+
+label {
+  color: rgb(69, 79, 89);
+}
+
+.download {
+  text-decoration: none;
+  color: rgb(5, 100, 189);
+  font-size: 1.2rem;
+  padding: 0.4rem 0.9rem;
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  border: 1px solid #0564bd;
+  transition: transform 1s, background-color 1s, color 1s;
+}
+
+.download:hover {
+  transform: scale(1.3);
+  background: #fff;
+  color: rgb(69, 79, 89);
+  box-shadow: 0 8px 16px 0 #0564bd;
+}
+
+.download:active {
+  background: #0564bd;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    width: 100%;
+    align-items: left;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .download {
+    width: 60%;
+    padding: 6px;
+  }
+
+  .about-me {
+    flex-direction: column;
+  }
+}
